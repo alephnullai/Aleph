@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "aleph": {
+      "command": "/Users/petecopeland/Repos/Aleph/.venv/bin/python",
+      "args": ["-m", "aleph.cli", "serve", "."]
+    }
+  }
+}

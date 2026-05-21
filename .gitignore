@@ -1,0 +1,43 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Testing
+.hypothesis/
+.pytest_cache/
+htmlcov/
+.coverage
+
+# Environment
+.env
+.venv/
+venv/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Aleph build cache (regenerable, large)
+.aleph/.aleph.build_cache.json
+.aleph/.aleph.index.json
+
+# OS
+.DS_Store
+Thumbs.db
+
+# License private keys — NEVER commit
+*.pem
+aleph_license_private*
+
+# Rust build artifacts
+accel/target/
+
+# Query log (session data)
+.aleph.query_log.jsonl
+.Atlas
