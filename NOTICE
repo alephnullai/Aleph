@@ -1,0 +1,43 @@
+NOTICE — Aleph Semantic Compiler
+
+Copyright (c) 2026 Aleph Null LLC. All rights reserved.
+
+PATENT PENDING
+
+The methods, systems, and processes embodied in this software — including but
+not limited to semantic compression of source code for large language model
+consumption, symbol-addressed navigation protocols, salience-weighted attention
+budgets, epistemic continuity layers, confidence-decay inference systems,
+multi-agent epistemic versioning, and pre-modification impact analysis — are
+the subject of one or more pending patent applications.
+
+OPEN-SOURCE LICENSE
+
+The source code in this repository is licensed under the MIT License (see
+LICENSE file). You are free to use, modify, and distribute this software
+under the terms of that license for personal and solo-developer use.
+
+COMMERCIAL / TEAM LICENSE
+
+Use of Aleph in a team, organizational, or commercial context requires a
+valid license from Aleph Null LLC. Licenses are available at:
+
+  https://alephnull.ai/pricing
+
+License tiers:
+  - Free:       Solo developers and open-source projects
+  - Pro:        Teams and indie studios ($19/user/mo or $99/repo/mo)
+  - Enterprise: Custom pricing for large organizations
+
+Licenses are offline-capable, cryptographically signed files that do not
+require internet access after download.
+
+PATENT NOTICE
+
+The availability of this software under an open-source license does not grant
+any license to the pending patents except as necessary to use the software
+for personal, non-commercial, solo-developer purposes. Commercial use of the
+patented methods requires a valid Pro or Enterprise license.
+
+For licensing inquiries: licensing@alephnull.ai
+For support: support@alephnull.ai
