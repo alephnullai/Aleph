@@ -1,0 +1,947 @@
+{
+  "meta": {
+    "date": "2026-06-10",
+    "token_counter": "tiktoken/o200k_base",
+    "corpora": {
+      "aleph": "~/repos/aleph",
+      "null": "~/repos/null"
+    },
+    "n_tasks": 26
+  },
+  "tasks": [
+    {
+      "id": "aleph-resolve-tokenize_identifier",
+      "corpus": "aleph",
+      "type": "resolve",
+      "query": "tokenize_identifier",
+      "aleph": {
+        "tokens": 304,
+        "calls": 2,
+        "wall_ms": 2.1,
+        "correct": true,
+        "answer": {
+          "file": "src/aleph/query/engine.py",
+          "symbol": "tokenize_identifier",
+          "line": 162,
+          "end_line": 180
+        }
+      },
+      "grep": {
+        "tokens": 1098,
+        "calls": 2,
+        "wall_ms": 23.2,
+        "correct": true,
+        "answer": {
+          "file": "src/aleph/query/engine.py",
+          "symbol": "tokenize_identifier",
+          "line": 162
+        }
+      }
+    },
+    {
+      "id": "aleph-resolve-QueryEngine",
+      "corpus": "aleph",
+      "type": "resolve",
+      "query": "QueryEngine",
+      "aleph": {
+        "tokens": 275,
+        "calls": 2,
+        "wall_ms": 1.9,
+        "correct": true,
+        "answer": {
+          "file": "src/aleph/query/engine.py",
+          "symbol": "QueryEngine",
+          "line": 193,
+          "end_line": 862
+        }
+      },
+      "grep": {
+        "tokens": 1229,
+        "calls": 2,
+        "wall_ms": 19.5,
+        "correct": true,
+        "answer": {
+          "file": "src/aleph/query/engine.py",
+          "symbol": "QueryEngine",
+          "line": 193
+        }
+      }
+    },
+    {
+      "id": "aleph-resolve-_cap_output",
+      "corpus": "aleph",
+      "type": "resolve",
+      "query": "_cap_output",
+      "aleph": {
+        "tokens": 317,
+        "calls": 2,
+        "wall_ms": 1.7,
+        "correct": true,
+        "answer": {
+          "file": "src/aleph/mcp/handlers.py",
+          "symbol": "_cap_output",
+          "line": 40,
+          "end_line": 59
+        }
+      },
+      "grep": {
+        "tokens": 779,
+        "calls": 2,
+        "wall_ms": 19.1,
+        "correct": true,
+        "answer": {
+          "file": "src/aleph/mcp/handlers.py",
+          "symbol": "_cap_output",
+          "line": 40
+        }
+      }
+    },
+    {
+      "id": "aleph-resolve-open_store",
+      "corpus": "aleph",
+      "type": "resolve",
+      "query": "open_store",
+      "aleph": {
+        "tokens": 484,
+        "calls": 2,
+        "wall_ms": 1.9,
+        "correct": true,
+        "answer": {
+          "file": "src/aleph/store/sqlite_store.py",
+          "symbol": "open_store",
+          "line": 741,
+          "end_line": 753
+        }
+      },
+      "grep": {
+        "tokens": 654,
+        "calls": 2,
+        "wall_ms": 18.9,
+        "correct": true,
+        "answer": {
+          "file": "src/aleph/store/sqlite_store.py",
+          "symbol": "open_store",
+          "line": 741
+        }
+      }
+    },
+    {
+      "id": "null-resolve-crystallize_fact",
+      "corpus": "null",
+      "type": "resolve",
+      "query": "crystallize_fact",
+      "aleph": {
+        "tokens": 313,
+        "calls": 2,
+        "wall_ms": 2.5,
+        "correct": true,
+        "answer": {
+          "file": "src/null_memory/crystallize.py",
+          "symbol": "crystallize_fact",
+          "line": 95,
+          "end_line": 171
+        }
+      },
+      "grep": {
+        "tokens": 2545,
+        "calls": 2,
+        "wall_ms": 29.2,
+        "correct": true,
+        "answer": {
+          "file": "src/null_memory/crystallize.py",
+          "symbol": "crystallize_fact",
+          "line": 95
+        }
+      }
+    },
+    {
+      "id": "null-resolve-redact",
+      "corpus": "null",
+      "type": "resolve",
+      "query": "redact",
+      "aleph": {
+        "tokens": 287,
+        "calls": 2,
+        "wall_ms": 1.6,
+        "correct": true,
+        "answer": {
+          "file": "src/null_memory/redaction.py",
+          "symbol": "redact",
+          "line": 51,
+          "end_line": 87
+        }
+      },
+      "grep": {
+        "tokens": 1061,
+        "calls": 2,
+        "wall_ms": 25.1,
+        "correct": true,
+        "answer": {
+          "file": "src/null_memory/redaction.py",
+          "symbol": "redact",
+          "line": 51
+        }
+      }
+    },
+    {
+      "id": "null-resolve-compute_fingerprint",
+      "corpus": "null",
+      "type": "resolve",
+      "query": "compute_fingerprint",
+      "aleph": {
+        "tokens": 309,
+        "calls": 2,
+        "wall_ms": 1.8,
+        "correct": true,
+        "answer": {
+          "file": "src/null_memory/fingerprint.py",
+          "symbol": "compute_fingerprint",
+          "line": 55,
+          "end_line": 192
+        }
+      },
+      "grep": {
+        "tokens": 1158,
+        "calls": 2,
+        "wall_ms": 24.4,
+        "correct": true,
+        "answer": {
+          "file": "src/null_memory/fingerprint.py",
+          "symbol": "compute_fingerprint",
+          "line": 55
+        }
+      }
+    },
+    {
+      "id": "null-resolve-classify_observation",
+      "corpus": "null",
+      "type": "resolve",
+      "query": "classify_observation",
+      "aleph": {
+        "tokens": 510,
+        "calls": 2,
+        "wall_ms": 1.9,
+        "correct": true,
+        "answer": {
+          "file": "src/null_memory/classifier.py",
+          "symbol": "classify_observation",
+          "line": 248,
+          "end_line": 322
+        }
+      },
+      "grep": {
+        "tokens": 3201,
+        "calls": 2,
+        "wall_ms": 25.1,
+        "correct": true,
+        "answer": {
+          "file": "src/null_memory/classifier.py",
+          "symbol": "classify_observation",
+          "line": 248
+        }
+      }
+    },
+    {
+      "id": "aleph-callers-tokenize_identifier",
+      "corpus": "aleph",
+      "type": "callers",
+      "query": "tokenize_identifier",
+      "aleph": {
+        "tokens": 528,
+        "calls": 2,
+        "wall_ms": 2.1,
+        "correct": true,
+        "answer": {
+          "callers": [
+            "TestTokenizeIdentifier::test_qualified_name_separators",
+            "TestTokenizeIdentifier::test_acronym_then_word",
+            "TestTokenizeIdentifier::test_camel_case",
+            "QueryEngine::search",
+            "TestTokenizeIdentifier::test_snake_case",
+            "TestTokenizeIdentifier::test_empty_and_punctuation",
+            "TestTokenizeIdentifier::test_acronym_run",
+            "TestTokenizeIdentifier::test_path_components",
+            "QueryEngine::_build_search_index",
+            "TestTokenizeIdentifier::test_digit_boundaries",
+            "TestTokenizeIdentifier::test_trailing_acronym"
+          ]
+        }
+      },
+      "grep": {
+        "tokens": 6289,
+        "calls": 3,
+        "wall_ms": 17.4,
+        "correct": true,
+        "answer": {
+          "callers": [
+            "TestTokenizeIdentifier::test_snake_case",
+            "TestTokenizeIdentifier::test_camel_case",
+            "TestTokenizeIdentifier::test_acronym_run",
+            "TestTokenizeIdentifier::test_trailing_acronym",
+            "TestTokenizeIdentifier::test_acronym_then_word",
+            "TestTokenizeIdentifier::test_digit_boundaries",
+            "TestTokenizeIdentifier::test_path_components",
+            "TestTokenizeIdentifier::test_qualified_name_separators",
+            "TestTokenizeIdentifier::test_empty_and_punctuation",
+            "tokenize_identifier",
+            "QueryEngine::_build_search_index",
+            "QueryEngine::search"
+          ],
+          "files_with_call_sites": [
+            "tests/unit/test_search_relevance.py",
+            "src/aleph/query/engine.py"
+          ]
+        }
+      }
+    },
+    {
+      "id": "aleph-callers-maybe_hint_migration",
+      "corpus": "aleph",
+      "type": "callers",
+      "query": "maybe_hint_migration",
+      "aleph": {
+        "tokens": 485,
+        "calls": 2,
+        "wall_ms": 2.2,
+        "correct": true,
+        "answer": {
+          "callers": [
+            "TestMigrationHint::test_no_artifacts_silent",
+            "TestMigrationHint::test_matching_root_and_scheme_silent",
+            "TestMigrationHint::test_fresh_auto_build_silent",
+            "QueryEngine::__init__",
+            "TestMigrationHint::test_hint_printed_once_per_dir",
+            "TestMigrationHint::test_case_mismatch_hints",
+            "TestMigrationHint::test_old_scheme_hints",
+            "TestMigrationHint::test_location_mismatch_hints"
+          ]
+        }
+      },
+      "grep": {
+        "tokens": 2546,
+        "calls": 3,
+        "wall_ms": 13.7,
+        "correct": true,
+        "answer": {
+          "callers": [
+            "TestMigrationHint::test_case_mismatch_hints",
+            "TestMigrationHint::test_location_mismatch_hints",
+            "TestMigrationHint::test_old_scheme_hints",
+            "TestMigrationHint::test_matching_root_and_scheme_silent",
+            "TestMigrationHint::test_hint_printed_once_per_dir",
+            "TestMigrationHint::test_no_artifacts_silent",
+            "TestMigrationHint::test_fresh_auto_build_silent",
+            "QueryEngine::__init__"
+          ],
+          "files_with_call_sites": [
+            "tests/property/test_id_portability.py",
+            "src/aleph/query/engine.py"
+          ]
+        }
+      }
+    },
+    {
+      "id": "aleph-callers-_cap_output",
+      "corpus": "aleph",
+      "type": "callers",
+      "query": "_cap_output",
+      "aleph": {
+        "tokens": 344,
+        "calls": 2,
+        "wall_ms": 1.8,
+        "correct": true,
+        "answer": {
+          "callers": [
+            "TestOutputCaps::test_cap_output_under_limit_unchanged",
+            "create_server",
+            "TestOutputCaps::test_cap_output_truncates_at_line_boundary"
+          ]
+        }
+      },
+      "grep": {
+        "tokens": 2406,
+        "calls": 3,
+        "wall_ms": 13.1,
+        "correct": true,
+        "answer": {
+          "callers": [
+            "TestOutputCaps::test_cap_output_under_limit_unchanged",
+            "TestOutputCaps::test_cap_output_truncates_at_line_boundary",
+            "wrapper"
+          ],
+          "files_with_call_sites": [
+            "tests/unit/test_mcp_tools.py",
+            "src/aleph/mcp/server.py"
+          ]
+        }
+      }
+    },
+    {
+      "id": "null-callers-crystallize_fact",
+      "corpus": "null",
+      "type": "callers",
+      "query": "crystallize_fact",
+      "aleph": {
+        "tokens": 750,
+        "calls": 2,
+        "wall_ms": 2.4,
+        "correct": true,
+        "answer": {
+          "callers": [
+            "test_single_atom_skipped",
+            "test_atom_too_close_to_parent_length_skipped",
+            "test_llm_returns_garbage_handled",
+            "test_llm_returns_prose_wrapped_json",
+            "test_anchored_facts_are_immune",
+            "test_llm_raises_handled",
+            "test_provenance_noise_atoms_stripped",
+            "Hypnos::_stage45_crystallize",
+            "test_too_many_atoms_truncated_to_max",
+            "test_already_crystallized_parent_skipped",
+            "test_provenance_only_split_skipped",
+            "test_llm_returns_wrong_shape_handled",
+            "test_short_fact_returns_none",
+            "test_long_fact_splits_into_atomic_children",
+            "test_child_confidence_inherits_when_below_cap",
+            "test_impact_is_split_across_children",
+            "test_children_inherit_parent_metadata",
+            "test_archived_or_forgotten_skipped",
+            "test_child_confidence_capped",
+            "test_at_threshold_minus_one_skipped",
+            "test_zero_atoms_skipped",
+            "test_atom_equal_to_parent_skipped"
+          ]
+        }
+      },
+      "grep": {
+        "tokens": 2637,
+        "calls": 3,
+        "wall_ms": 18.7,
+        "correct": true,
+        "answer": {
+          "callers": [
+            "test_short_fact_returns_none",
+            "test_at_threshold_minus_one_skipped",
+            "test_anchored_facts_are_immune",
+            "test_already_crystallized_parent_skipped",
+            "test_archived_or_forgotten_skipped",
+            "test_long_fact_splits_into_atomic_children",
+            "test_children_inherit_parent_metadata",
+            "test_child_confidence_capped",
+            "test_child_confidence_inherits_when_below_cap",
+            "test_impact_is_split_across_children",
+            "test_zero_atoms_skipped",
+            "test_single_atom_skipped",
+            "test_too_many_atoms_truncated_to_max",
+            "test_atom_equal_to_parent_skipped",
+            "test_atom_too_close_to_parent_length_skipped",
+            "test_provenance_noise_atoms_stripped",
+            "test_provenance_only_split_skipped",
+            "test_llm_returns_prose_wrapped_json",
+            "test_llm_returns_garbage_handled",
+            "test_llm_returns_wrong_shape_handled",
+            "test_llm_raises_handled",
+            "Hypnos::_stage45_crystallize"
+          ],
+          "files_with_call_sites": [
+            "tests/test_crystallize.py",
+            "src/null_memory/hypnos.py"
+          ]
+        }
+      }
+    },
+    {
+      "id": "null-callers-redact",
+      "corpus": "null",
+      "type": "callers",
+      "query": "redact",
+      "aleph": {
+        "tokens": 461,
+        "calls": 2,
+        "wall_ms": 1.8,
+        "correct": true,
+        "answer": {
+          "callers": [
+            "TestRedact::test_private_key_block",
+            "TestRedact::test_plain_text_untouched",
+            "MultiverseManager::broadcast",
+            "TestRedact::test_openai_style_key",
+            "TestRedact::test_identity_core_terms",
+            "TestRedact::test_aws_access_key",
+            "TestRedact::test_jwt",
+            "TestRedact::test_api_tokens",
+            "TestRedact::test_connection_string_password",
+            "TestRedact::test_credential_assignment"
+          ]
+        }
+      },
+      "grep": {
+        "tokens": 2422,
+        "calls": 3,
+        "wall_ms": 16.4,
+        "correct": true,
+        "answer": {
+          "callers": [
+            "TestRedact::test_plain_text_untouched",
+            "TestRedact::test_api_tokens",
+            "TestRedact::test_openai_style_key",
+            "TestRedact::test_aws_access_key",
+            "TestRedact::test_credential_assignment",
+            "TestRedact::test_connection_string_password",
+            "TestRedact::test_private_key_block",
+            "TestRedact::test_jwt",
+            "TestRedact::test_identity_core_terms",
+            "MultiverseManager::broadcast"
+          ],
+          "files_with_call_sites": [
+            "tests/test_redaction.py",
+            "src/null_memory/multiverse.py"
+          ]
+        }
+      }
+    },
+    {
+      "id": "null-callers-compute_fingerprint",
+      "corpus": "null",
+      "type": "callers",
+      "query": "compute_fingerprint",
+      "aleph": {
+        "tokens": 282,
+        "calls": 2,
+        "wall_ms": 1.8,
+        "correct": true,
+        "answer": {
+          "callers": [
+            "AgentMemory::close"
+          ]
+        }
+      },
+      "grep": {
+        "tokens": 1057,
+        "calls": 2,
+        "wall_ms": 16.3,
+        "correct": true,
+        "answer": {
+          "callers": [
+            "AgentMemory::close"
+          ],
+          "files_with_call_sites": [
+            "src/null_memory/agent.py"
+          ]
+        }
+      }
+    },
+    {
+      "id": "aleph-explain-tokenize_identifier",
+      "corpus": "aleph",
+      "type": "explain",
+      "query": "tokenize_identifier",
+      "aleph": {
+        "tokens": 406,
+        "calls": 2,
+        "wall_ms": 1.9,
+        "correct": true,
+        "answer": {
+          "symbol": "tokenize_identifier",
+          "facts_missing": []
+        }
+      },
+      "grep": {
+        "tokens": 1098,
+        "calls": 2,
+        "wall_ms": 19.2,
+        "correct": true,
+        "answer": {
+          "file": "src/aleph/query/engine.py",
+          "facts_missing": []
+        }
+      }
+    },
+    {
+      "id": "aleph-explain-semantic_status",
+      "corpus": "aleph",
+      "type": "explain",
+      "query": "semantic_status",
+      "aleph": {
+        "tokens": 361,
+        "calls": 2,
+        "wall_ms": 1.9,
+        "correct": true,
+        "answer": {
+          "symbol": "QueryEngine::semantic_status",
+          "facts_missing": []
+        }
+      },
+      "grep": {
+        "tokens": 1155,
+        "calls": 2,
+        "wall_ms": 19.8,
+        "correct": true,
+        "answer": {
+          "file": "src/aleph/query/engine.py",
+          "facts_missing": []
+        }
+      }
+    },
+    {
+      "id": "aleph-explain-_cap_output",
+      "corpus": "aleph",
+      "type": "explain",
+      "query": "_cap_output",
+      "aleph": {
+        "tokens": 440,
+        "calls": 2,
+        "wall_ms": 1.8,
+        "correct": true,
+        "answer": {
+          "symbol": "_cap_output",
+          "facts_missing": []
+        }
+      },
+      "grep": {
+        "tokens": 779,
+        "calls": 2,
+        "wall_ms": 19.4,
+        "correct": true,
+        "answer": {
+          "file": "src/aleph/mcp/handlers.py",
+          "facts_missing": []
+        }
+      }
+    },
+    {
+      "id": "null-explain-crystallize_fact",
+      "corpus": "null",
+      "type": "explain",
+      "query": "crystallize_fact",
+      "aleph": {
+        "tokens": 1024,
+        "calls": 2,
+        "wall_ms": 2.4,
+        "correct": true,
+        "answer": {
+          "symbol": "crystallize_fact",
+          "facts_missing": []
+        }
+      },
+      "grep": {
+        "tokens": 2545,
+        "calls": 2,
+        "wall_ms": 25.7,
+        "correct": true,
+        "answer": {
+          "file": "src/null_memory/crystallize.py",
+          "facts_missing": []
+        }
+      }
+    },
+    {
+      "id": "null-explain-redact",
+      "corpus": "null",
+      "type": "explain",
+      "query": "redact",
+      "aleph": {
+        "tokens": 539,
+        "calls": 2,
+        "wall_ms": 1.7,
+        "correct": true,
+        "answer": {
+          "symbol": "redact",
+          "facts_missing": []
+        }
+      },
+      "grep": {
+        "tokens": 1061,
+        "calls": 2,
+        "wall_ms": 25.2,
+        "correct": true,
+        "answer": {
+          "file": "src/null_memory/redaction.py",
+          "facts_missing": []
+        }
+      }
+    },
+    {
+      "id": "null-explain-should_block_broadcast",
+      "corpus": "null",
+      "type": "explain",
+      "query": "should_block_broadcast",
+      "aleph": {
+        "tokens": 2097,
+        "calls": 2,
+        "wall_ms": 3.0,
+        "correct": true,
+        "answer": {
+          "symbol": "should_block_broadcast",
+          "facts_missing": []
+        }
+      },
+      "grep": {
+        "tokens": 1070,
+        "calls": 2,
+        "wall_ms": 24.0,
+        "correct": true,
+        "answer": {
+          "file": "src/null_memory/redaction.py",
+          "facts_missing": []
+        }
+      }
+    },
+    {
+      "id": "aleph-find-output-cap",
+      "corpus": "aleph",
+      "type": "find",
+      "query": "cap the size of MCP tool responses at a byte limit",
+      "aleph": {
+        "tokens": 305,
+        "calls": 2,
+        "wall_ms": 8.2,
+        "correct": false,
+        "answer": {
+          "file": "tests/unit/test_mcp_tools.py",
+          "symbol": "TestOutputCaps::test_callers_capped_at_50",
+          "rank": 1
+        }
+      },
+      "grep": {
+        "tokens": 12042,
+        "calls": 4,
+        "wall_ms": 71.1,
+        "correct": true,
+        "answer": {
+          "file": "src/aleph/mcp/handlers.py",
+          "rank": 3
+        }
+      }
+    },
+    {
+      "id": "aleph-find-embedding-matrix",
+      "corpus": "aleph",
+      "type": "find",
+      "query": "load embedding vectors into an in-memory matrix for cosine ranking",
+      "aleph": {
+        "tokens": 320,
+        "calls": 2,
+        "wall_ms": 8.7,
+        "correct": false,
+        "answer": {
+          "file": "tests/fixtures/cpp/sample_realistic.cpp",
+          "symbol": "data_processing::DataTransformer::std::vector<std::pair<std::string, double>>",
+          "rank": 1
+        }
+      },
+      "grep": {
+        "tokens": 12295,
+        "calls": 4,
+        "wall_ms": 62.5,
+        "correct": true,
+        "answer": {
+          "file": "src/aleph/query/engine.py",
+          "rank": 2
+        }
+      }
+    },
+    {
+      "id": "aleph-find-query-log",
+      "corpus": "aleph",
+      "type": "find",
+      "query": "append each tool query to a JSONL log file on disk",
+      "aleph": {
+        "tokens": 301,
+        "calls": 2,
+        "wall_ms": 7.8,
+        "correct": false,
+        "answer": {
+          "file": "tests/unit/test_query_engine.py",
+          "symbol": "TestQueryCLI::test_cli_search_json",
+          "rank": 1
+        }
+      },
+      "grep": {
+        "tokens": 10909,
+        "calls": 4,
+        "wall_ms": 63.9,
+        "correct": true,
+        "answer": {
+          "file": "src/aleph/mcp/handlers.py",
+          "rank": 1
+        }
+      }
+    },
+    {
+      "id": "null-find-crystallize",
+      "corpus": "null",
+      "type": "find",
+      "query": "split a verbose memory fact into atomic children using an LLM",
+      "aleph": {
+        "tokens": 1673,
+        "calls": 2,
+        "wall_ms": 9.3,
+        "correct": false,
+        "answer": {
+          "file": "tests/test_crystallize.py",
+          "symbol": "test_long_fact_splits_into_atomic_children",
+          "rank": 1
+        }
+      },
+      "grep": {
+        "tokens": 11622,
+        "calls": 4,
+        "wall_ms": 93.3,
+        "correct": true,
+        "answer": {
+          "file": "src/null_memory/crystallize.py",
+          "rank": 2
+        }
+      }
+    },
+    {
+      "id": "null-find-redaction",
+      "corpus": "null",
+      "type": "find",
+      "query": "strip secrets and api keys from text before broadcasting",
+      "aleph": {
+        "tokens": 2408,
+        "calls": 2,
+        "wall_ms": 8.8,
+        "correct": true,
+        "answer": {
+          "file": "src/null_memory/redaction.py",
+          "symbol": "should_block_broadcast",
+          "rank": 5
+        }
+      },
+      "grep": {
+        "tokens": 14427,
+        "calls": 4,
+        "wall_ms": 105.3,
+        "correct": true,
+        "answer": {
+          "file": "src/null_memory/redaction.py",
+          "rank": 4
+        }
+      }
+    },
+    {
+      "id": "null-find-identity-drift",
+      "corpus": "null",
+      "type": "find",
+      "query": "cosine distance between identity vectors to measure drift",
+      "aleph": {
+        "tokens": 1696,
+        "calls": 2,
+        "wall_ms": 8.0,
+        "correct": true,
+        "answer": {
+          "file": "src/null_memory/fingerprint.py",
+          "symbol": "identity_drift",
+          "rank": 3
+        }
+      },
+      "grep": {
+        "tokens": 14315,
+        "calls": 4,
+        "wall_ms": 92.9,
+        "correct": true,
+        "answer": {
+          "file": "src/null_memory/fingerprint.py",
+          "rank": 3
+        }
+      }
+    }
+  ],
+  "summary": {
+    "overall": {
+      "n": 26,
+      "aleph": {
+        "median_tokens": 423.0,
+        "total_tokens": 17219,
+        "median_calls": 2.0,
+        "median_wall_ms": 2.0,
+        "accuracy": 0.846
+      },
+      "grep": {
+        "median_tokens": 2414.0,
+        "total_tokens": 112400,
+        "median_calls": 2.0,
+        "median_wall_ms": 23.6,
+        "accuracy": 1.0
+      },
+      "grep_to_aleph_token_ratio": 5.71
+    },
+    "by_type": {
+      "callers": {
+        "n": 6,
+        "aleph": {
+          "median_tokens": 473.0,
+          "total_tokens": 2850,
+          "median_calls": 2.0,
+          "median_wall_ms": 2.0,
+          "accuracy": 1.0
+        },
+        "grep": {
+          "median_tokens": 2484.0,
+          "total_tokens": 17357,
+          "median_calls": 3.0,
+          "median_wall_ms": 16.4,
+          "accuracy": 1.0
+        },
+        "grep_to_aleph_token_ratio": 5.25
+      },
+      "explain": {
+        "n": 6,
+        "aleph": {
+          "median_tokens": 489.5,
+          "total_tokens": 4867,
+          "median_calls": 2.0,
+          "median_wall_ms": 1.9,
+          "accuracy": 1.0
+        },
+        "grep": {
+          "median_tokens": 1084.0,
+          "total_tokens": 7708,
+          "median_calls": 2.0,
+          "median_wall_ms": 21.9,
+          "accuracy": 1.0
+        },
+        "grep_to_aleph_token_ratio": 2.21
+      },
+      "find": {
+        "n": 6,
+        "aleph": {
+          "median_tokens": 996.5,
+          "total_tokens": 6703,
+          "median_calls": 2.0,
+          "median_wall_ms": 8.4,
+          "accuracy": 0.333
+        },
+        "grep": {
+          "median_tokens": 12168.5,
+          "total_tokens": 75610,
+          "median_calls": 4.0,
+          "median_wall_ms": 82.0,
+          "accuracy": 1.0
+        },
+        "grep_to_aleph_token_ratio": 12.21
+      },
+      "resolve": {
+        "n": 8,
+        "aleph": {
+          "median_tokens": 311.0,
+          "total_tokens": 2799,
+          "median_calls": 2.0,
+          "median_wall_ms": 1.9,
+          "accuracy": 1.0
+        },
+        "grep": {
+          "median_tokens": 1128.0,
+          "total_tokens": 11725,
+          "median_calls": 2.0,
+          "median_wall_ms": 23.8,
+          "accuracy": 1.0
+        },
+        "grep_to_aleph_token_ratio": 3.63
+      }
+    }
+  }
+}
