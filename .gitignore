@@ -1,0 +1,66 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Testing
+.hypothesis/
+.pytest_cache/
+htmlcov/
+.coverage
+
+# Environment
+.env
+.venv/
+venv/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Aleph build cache (regenerable, large)
+.aleph/.aleph.build_cache.json
+.aleph/.aleph.index.json
+
+# Aleph SQLite store (canonical, regenerable; portable by design but
+# excluded from the self-index commit — large binary that churns per build)
+.aleph/aleph.db
+.aleph/aleph.db-wal
+.aleph/aleph.db-shm
+
+# Aleph project text artifacts (regenerated per-build; bake in absolute
+# repo paths, so they are NOT portable across machines/OSes — committing
+# a Windows build breaks EXPAND on macOS and vice versa). Build locally.
+.aleph/project.aleph.*
+
+# Epistemic store sidecar files (lock/backup/quarantine — never commit)
+*.epistemic.lock
+*.epistemic.bak
+*.epistemic.corrupt.*
+*.epistemic.tmp.*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# License private keys — NEVER commit
+*.pem
+aleph_license_private*
+
+# Rust build artifacts
+accel/target/
+
+# Query log (session data)
+.aleph.query_log.jsonl
+.Atlas
+.claude/
+
+# Cross-project workspace manifest — per-machine, contains absolute paths.
+# It defines a local multi-repo workspace and must not be committed (a tracked
+# copy shadows every other machine's real project layout).
+.aleph-workspace.json
