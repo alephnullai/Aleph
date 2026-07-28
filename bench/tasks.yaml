@@ -1,0 +1,229 @@
+# Benchmark task suite — Aleph vs grep+read baseline (Phase A1).
+#
+# Ground truth (file, symbol, caller sets, key facts) was VERIFIED
+# against the current source of both corpora on 2026-06-10 while
+# authoring (grep for the defs / call sites; facts are verbatim
+# substrings of the target function's source).
+#
+# Scoring is SYMBOL-IDENTITY based: a resolve answer is correct when
+# it names the right file + symbol (qualified name). `line:` values
+# below are an informational reference for humans re-verifying tasks;
+# they are reported in results.json but NOT scored — line-pinned
+# ground truth rots with every unrelated commit (it silently broke
+# two resolve tasks before the 2026-06-10 hardening).
+#
+# Corpora must have a .aleph index built with:
+#   python -m aleph.cli build <root> --semantic
+# Paths: relative paths resolve against this repo's root.
+
+corpora:
+  aleph: "."
+  "null": "~/repos/null"
+
+tasks:
+  # ── resolve: where is symbol X defined (file + line) ──────────────
+  - id: aleph-resolve-tokenize_identifier
+    corpus: aleph
+    type: resolve
+    query: tokenize_identifier
+    symbol: tokenize_identifier
+    expect: {file: src/aleph/query/engine.py, line: 162}
+
+  - id: aleph-resolve-QueryEngine
+    corpus: aleph
+    type: resolve
+    query: QueryEngine
+    symbol: QueryEngine
+    expect: {file: src/aleph/query/engine.py, line: 193}
+
+  - id: aleph-resolve-_cap_output
+    corpus: aleph
+    type: resolve
+    query: _cap_output
+    symbol: _cap_output
+    expect: {file: src/aleph/mcp/handlers.py, line: 40}
+
+  - id: aleph-resolve-open_store
+    corpus: aleph
+    type: resolve
+    query: open_store
+    symbol: open_store
+    expect: {file: src/aleph/store/sqlite_store.py, line: 741}
+
+  - id: null-resolve-crystallize_fact
+    corpus: "null"
+    type: resolve
+    query: crystallize_fact
+    symbol: crystallize_fact
+    expect: {file: src/null_memory/crystallize.py, line: 95}
+
+  - id: null-resolve-redact
+    corpus: "null"
+    type: resolve
+    query: redact
+    symbol: redact
+    expect: {file: src/null_memory/redaction.py, line: 51}
+
+  - id: null-resolve-compute_fingerprint
+    corpus: "null"
+    type: resolve
+    query: compute_fingerprint
+    symbol: compute_fingerprint
+    expect: {file: src/null_memory/fingerprint.py, line: 55}
+
+  - id: null-resolve-classify_observation
+    corpus: "null"
+    type: resolve
+    query: classify_observation
+    symbol: classify_observation
+    expect: {file: src/null_memory/classifier.py, line: 248}
+
+  # ── callers: who calls X (subset match; tests don't penalize) ─────
+  # Each expected entry is a regex; alternates cover naming differences
+  # between aleph (registering function) and grep (lexical enclosing
+  # scope) where both genuinely located the call site.
+  - id: aleph-callers-tokenize_identifier
+    corpus: aleph
+    type: callers
+    query: tokenize_identifier
+    symbol: tokenize_identifier
+    expect:
+      callers:
+        - "QueryEngine::search"
+        - "QueryEngine::_build_search_index"
+
+  - id: aleph-callers-maybe_hint_migration
+    corpus: aleph
+    type: callers
+    query: maybe_hint_migration
+    symbol: maybe_hint_migration
+    expect:
+      callers:
+        - "QueryEngine::__init__"
+
+  - id: aleph-callers-_cap_output
+    corpus: aleph
+    type: callers
+    query: _cap_output
+    symbol: _cap_output
+    expect:
+      # aleph attributes the call site to create_server; lexically the
+      # enclosing def is the nested wrapper/capped_tool closure.
+      callers:
+        - "create_server|capped_tool|wrapper"
+
+  - id: null-callers-crystallize_fact
+    corpus: "null"
+    type: callers
+    query: crystallize_fact
+    symbol: crystallize_fact
+    expect:
+      callers:
+        - "Hypnos::_stage45_crystallize"
+
+  - id: null-callers-redact
+    corpus: "null"
+    type: callers
+    query: redact
+    symbol: redact
+    expect:
+      callers:
+        - "MultiverseManager::broadcast"
+
+  - id: null-callers-compute_fingerprint
+    corpus: "null"
+    type: callers
+    query: compute_fingerprint
+    symbol: compute_fingerprint
+    expect:
+      callers:
+        - "AgentMemory::close"
+
+  # ── explain: what does X do (graded by key-fact presence in the
+  #    evidence each mode retrieved; facts are verbatim source text) ──
+  - id: aleph-explain-tokenize_identifier
+    corpus: aleph
+    type: explain
+    query: tokenize_identifier
+    symbol: tokenize_identifier
+    expect:
+      facts: ["camelCase", "snake_case", "lowercase subtokens", "digit"]
+
+  - id: aleph-explain-semantic_status
+    corpus: aleph
+    type: explain
+    query: semantic_status
+    symbol: semantic_status
+    expect:
+      facts: ["no-index", "no-dependency", "fastembed"]
+
+  - id: aleph-explain-_cap_output
+    corpus: aleph
+    type: explain
+    query: _cap_output
+    symbol: _cap_output
+    expect:
+      facts: ["max_bytes", "line boundary", "truncat"]
+
+  - id: null-explain-crystallize_fact
+    corpus: "null"
+    type: explain
+    query: crystallize_fact
+    symbol: crystallize_fact
+    expect:
+      facts: ["atomic", "crystallized_into", "anchor", "MAX_ATOMS"]
+
+  - id: null-explain-redact
+    corpus: "null"
+    type: explain
+    query: redact
+    symbol: redact
+    expect:
+      facts: ["SECRET_PATTERNS", "core_terms", "labels"]
+
+  - id: null-explain-should_block_broadcast
+    corpus: "null"
+    type: explain
+    query: should_block_broadcast
+    symbol: should_block_broadcast
+    expect:
+      facts: ["_broadcast_classifier", "fail closed"]
+
+  # ── find: which code does <behavior in natural language> ──────────
+  # Correct when the expected file/symbol is in the top-5 ranked
+  # results (aleph: hybrid search; grep: keyword-hit file ranking).
+  - id: aleph-find-output-cap
+    corpus: aleph
+    type: find
+    query: "cap the size of MCP tool responses at a byte limit"
+    expect: {file: src/aleph/mcp/handlers.py, symbol: _cap_output}
+
+  - id: aleph-find-embedding-matrix
+    corpus: aleph
+    type: find
+    query: "load embedding vectors into an in-memory matrix for cosine ranking"
+    expect: {file: src/aleph/query/engine.py, symbol: _load_semantic}
+
+  - id: aleph-find-query-log
+    corpus: aleph
+    type: find
+    query: "append each tool query to a JSONL log file on disk"
+    expect: {file: src/aleph/mcp/handlers.py, symbol: _flush_query_entry}
+
+  - id: null-find-crystallize
+    corpus: "null"
+    type: find
+    query: "split a verbose memory fact into atomic children using an LLM"
+    expect: {file: src/null_memory/crystallize.py, symbol: crystallize_fact}
+
+  - id: null-find-redaction
+    corpus: "null"
+    type: find
+    query: "strip secrets and api keys from text before broadcasting"
+    expect: {file: src/null_memory/redaction.py, symbol: redact}
+
+  - id: null-find-identity-drift
+    corpus: "null"
+    type: find
+    query: "cosine distance between identity vectors to measure drift"
+    expect: {file: src/null_memory/fingerprint.py, symbol: identity_drift}
